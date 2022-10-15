@@ -1,0 +1,89 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "EB Garamond", serif, Arial, Helvetica;
+}
+
+
+.menu{
+    background-color: #353A40;
+    padding: 7px;
+}
+
+.menu a{
+    transition: 1s;
+}
+
+.menu a:hover{
+    scale: 0.9;
+}
+
+
+.hero{
+    color: white;
+    background: linear-gradient(rgb(29, 31, 32),rgba(0, 0, 0, 0.485)), url(../imagenes/ba1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:local;
+    width: 100%;
+    height: calc(80vh - 65.58px);
+    display: flex;
+    justify-content: end;
+    padding: 30px;
+}
+
+
+.oradores{
+    text-align: center;
+    margin: 15px;
+}
+
+.fondo2{
+    background-color: #343940;
+    color: aliceblue;
+}
+
+.boton-honolulu a button{
+    background-color: transparent;
+    color: aliceblue;
+}
+.honolulu{
+    width:100%;
+    height: 100%;
+}
+
+.form{
+    margin: 15px;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+}
+
+.form button{
+    background-color: #96C93E;
+    border-color: #96C93E;
+}
+
+.form button:hover{
+    color: #96C93E;
+    background-color: #fff;
+    border-color: #96C93E;
+}
+
+.pie{
+    background-color: #1C445E;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.pie ul li a{
+    color: rgb(213, 219, 224);
+}
+
+.pie ul li a:hover{
+    color:#29A945;
+}
