@@ -1,32 +1,32 @@
-*{
-    padding:0;
+* {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "EB Garamond", serif, Arial, Helvetica;
 }
 
 
-.menu{
+.menu {
     background-color: #353A40;
     padding: 7px;
 }
 
-.menu a{
+.menu a {
     transition: 1s;
 }
 
-.menu a:hover{
+.menu a:hover {
     scale: 0.9;
 }
 
 
-.hero{
+.hero {
     color: white;
-    background: linear-gradient(rgb(29, 31, 32),rgba(0, 0, 0, 0.485)), url(../imagenes/ba1.jpg);
+    background: linear-gradient(rgb(29, 31, 32), rgba(0, 0, 0, 0.485)), url(../imagenes/ba1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment:local;
+    background-attachment: local;
     width: 100%;
     height: calc(80vh - 65.58px);
     display: flex;
@@ -35,55 +35,56 @@
 }
 
 
-.oradores{
+.oradores {
     text-align: center;
     margin: 15px;
 }
 
-.fondo2{
+.fondo2 {
     background-color: #343940;
     color: aliceblue;
 }
 
-.boton-honolulu a button{
+.boton-honolulu a button {
     background-color: transparent;
     color: aliceblue;
 }
-.honolulu{
-    width:100%;
+
+.honolulu {
+    width: 100%;
     height: 100%;
 }
 
-.form{
+.form {
     margin: 15px;
     text-align: center;
     width: 50%;
     height: 100%;
 }
 
-.form button{
+.form button {
     background-color: #96C93E;
     border-color: #96C93E;
 }
 
-.form button:hover{
+.form button:hover {
     color: #96C93E;
     background-color: #fff;
     border-color: #96C93E;
 }
 
-.pie{
+.pie {
     background-color: #1C445E;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
 
-.pie ul li a{
+.pie ul li a {
     color: rgb(213, 219, 224);
 }
 
-.pie ul li a:hover{
-    color:#29A945;
+.pie ul li a:hover {
+    color: #29A945;
 }

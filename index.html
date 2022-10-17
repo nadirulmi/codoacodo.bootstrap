@@ -14,35 +14,43 @@
 
 <body>
     <!--NAV-->
-    <nav class="navbar navbar-expand-lg bg-light sticky-top p-0">
-        <div class="container-fluid menu">
-            <img src="./imagenes/codoacodo.png" alt="logo" width="90px">
-            <a class="text-light navbar-brand" href="#">Conf Bs As</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-flex justify-content-md-end" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="text-light nav-link active" aria-current="page" href="#">La conferencia</a>
-                    <a class="text-white-50 nav-link" href="#orador">Los oradores</a>
-                    <a class="text-white-50 nav-link" href="#lugar">Lugar y fecha</a>
-                    <a class="text-white-50 nav-link" href="#conviertete">Conviértete en orador</a>
-                    <a class="text-success nav-link active ticket" aria-current="page" href="tickets">Comprar tickets</a>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light sticky-top p-0">
+            <div class="container-fluid menu">
+                <img src="./imagenes/codoacodo.png" alt="logo" width="90px">
+                <a class="text-light navbar-brand" href="#">Conf Bs As</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-md-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="text-light nav-link active" aria-current="page" href="#">La conferencia</a>
+                        <a class="text-white-50 nav-link" href="#orador">Los oradores</a>
+                        <a class="text-white-50 nav-link" href="#lugar">Lugar y fecha</a>
+                        <a class="text-white-50 nav-link" href="#conviertete">Conviértete en orador</a>
+                        <a class="text-success nav-link active ticket" aria-current="page" href="tickets">Comprar
+                            tickets</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <main>
         <!--HERO SECTION-->
         <section class="g-0  hero row align-items-center">
             <div class="px-4 py-5 text-center text-md-end col-md-6 offset-md-6">
                 <h1 class="fw-bold fs-2 ">Conf Bs As</h1>
-                  <p>Conferencia Bs.As llega por primera vez a la Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
-                    <button type="button" class="text-light m-2 btn btn-outline-secondary btn-lg px-4 fs-6">Comprar tickets</button>
-                    <button type="button" class="m-2 btn btn-success btn-lg px-4 gap-3 fs-6">Quiero ser orador</button>
-                </div>
+                <p>Conferencia Bs.As llega por primera vez a la Argentina. Un evento para compartir con nuestra
+                    comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven
+                    a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel
+                    que tenemos para ti. Te esperamos!</p>
+                <button type="button" class="text-light m-2 btn btn-outline-secondary btn-lg px-4 fs-6">Comprar
+                    tickets</button>
+                <button type="button" class="m-2 btn btn-success btn-lg px-4 gap-3 fs-6">Quiero ser orador</button>
+            </div>
         </section>
 
         <!--ORADORES-->
@@ -58,9 +66,10 @@
                         <span class="badge text-bg-warning">JavaScript</span>
                         <span class="badge text-bg-info">React</span>
                         <h3 class="card-title fs-5 m-1">Steve Jobs</h3>
-                        <p class="card-text">Empresario, diseñador industrial,  magnate empresarial, propietario de medios e
-                        inversor estadounidense, cofundador y presidente ejecutivo de Apple​ y máximo accionista
-                        individual de The Walt Disney Company</p>
+                        <p class="card-text">Empresario, diseñador industrial, magnate empresarial, propietario de
+                            medios e
+                            inversor estadounidense, cofundador y presidente ejecutivo de Apple​ y máximo accionista
+                            individual de The Walt Disney Company</p>
                     </div>
                 </div>
                 <div class="card oradores" style="width: 18rem;">
@@ -68,19 +77,22 @@
                     <div class="card-body">
                         <span class="badge text-bg-warning">JavaScript</span>
                         <span class="badge text-bg-info">React</span>
-                      <h3 class="card-title fs-5 m-1">Bill Gates</h3>
-                      <p class="card-text">Magnate empresarial, desarrollador de software, inversor, autor y filántropo estadounidense. Es cofundador de Microsoft</p>
+                        <h3 class="card-title fs-5 m-1">Bill Gates</h3>
+                        <p class="card-text">Magnate empresarial, desarrollador de software, inversor, autor y
+                            filántropo estadounidense. Es cofundador de Microsoft</p>
                     </div>
-                  </div>
-                  <div class="card oradores" style="width: 18rem;">
+                </div>
+                <div class="card oradores" style="width: 18rem;">
                     <img src="./imagenes/ada.jpeg" class="card-img-top" alt="Ada Lovelace">
                     <div class="card-body">
                         <span class="badge text-bg-secondary">Negocios</span>
                         <span class="badge text-bg-danger">Startups</span>
-                      <h3 class="card-title fs-5 m-1">Ada Lovelace</h3>
-                      <p class="card-text">Matemática y escritora británica, célebre sobre todo por su trabajo acerca de la computadora mecánica de uso general de Charles Babbage, la denominada máquina analítica.</p>
+                        <h3 class="card-title fs-5 m-1">Ada Lovelace</h3>
+                        <p class="card-text">Matemática y escritora británica, célebre sobre todo por su trabajo acerca
+                            de la computadora mecánica de uso general de Charles Babbage, la denominada máquina
+                            analítica.</p>
                     </div>
-                  </div>
+                </div>
             </div>
         </section>
     </main>
@@ -114,12 +126,12 @@
                         ignite.</span> Cuéntanos de que quieres hablar!</p>
                 <div class="row">
                     <div class="my-2 col-md-6 col-sm-12 ">
-                        <input type="email" class="form-control" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" placeholder="Nombre">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Nombre">
                     </div>
                     <div class="my-2 col-md-6 col-sm-12">
-                        <input type="email" class="form-control" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" placeholder="Apellido">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Apellido">
                     </div>
                     <div class="my-2 form-floating">
                         <textarea class="form-control" id="floatingTextarea2" style="height: 100px"></textarea>
@@ -133,8 +145,8 @@
             </section>
         </div>
 
-         <!--FOOTER-->
-         <div class="pie container-fluid">
+        <!--FOOTER-->
+        <div class="pie container-fluid">
             <ul class="nav justify-content-center pb-3 mb-3">
                 <li class="nav-item"><a href="#" class="nav-link px-2">Preguntas frecuentes</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 ">Contáctanos</a></li>
@@ -146,7 +158,7 @@
             </ul>
         </div>
 
-    <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
 </body>
 
 </html>
