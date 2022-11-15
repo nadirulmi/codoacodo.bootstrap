@@ -15,7 +15,7 @@
 <body>
     <!--NAV-->
     <header>
-        <nav class="navbar navbar-expand-lg bg-light sticky-top p-0">
+        <nav class="navbar navbar-expand-lg bg-light fixed-top p-0">
             <div class="container-fluid menu">
                 <img src="./imagenes/codoacodo.png" alt="logo" width="90px">
                 <a class="text-light navbar-brand" href="#">Conf Bs As</a>
@@ -30,7 +30,7 @@
                         <a class="text-white-50 nav-link" href="#orador">Los oradores</a>
                         <a class="text-white-50 nav-link" href="#lugar">Lugar y fecha</a>
                         <a class="text-white-50 nav-link" href="#conviertete">Conviértete en orador</a>
-                        <a class="text-success nav-link active ticket" aria-current="page" href="tickets">Comprar
+                        <a class="text-success nav-link active ticket" aria-current="page" href="#tickets">Comprar
                             tickets</a>
                     </div>
                 </div>
@@ -145,9 +145,76 @@
             </section>
         </div>
 
+        <!--SECCION TICKETS-->
+        <section id="tickets">
+            <div class="d-flex justify-content-center flex-wrap m-5">
+                <div class="card border-info mb-3 m-2 " style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center fw-semibold fs-4">Estudiante</h5>
+                        <p class="card-text text-center">Tienen un descuento</p>
+                        <p class="text-center fw-bold">80%</p>
+                        <p class="text-center text-muted">*presentar documentación
+                        <p>
+                    </div>
+                </div>
+                <div class="card border-info mb-3 m-2 " style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center fw-semibold fs-4">Trainee</h5>
+                        <p class="card-text text-center">Tienen un descuento</p>
+                        <p class="text-center fw-bold">50%</p>
+                        <p class="text-center text-muted">*presentar documentación
+                        <p>
+                    </div>
+                </div>
+                <div class="card border-warning mb-3 m-2 " style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center fw-semibold fs-4">Junior</h5>
+                        <p class="card-text text-center">Tienen un descuento</p>
+                        <p class="text-center fw-bold">15%</p>
+                        <p class="text-center text-muted">*presentar documentación
+                        <p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="d-flex justify-content-center align-items-center my-3"> 
+            <div class="row form">
+                <div class="my-2 col-md-6 col-sm-12 ">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Nombre">
+                </div>
+                <div class="my-2 col-md-6 col-sm-12">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Apellido">
+                </div>
+                <div class="mb-3 my-2 col-12">
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="ejemplo@correo.com">
+                </div>
+                <div>
+                    <select class="form-select" aria-label="Default select example">
+                        <option value="estudiante" id="estudiante">Estudiante</option>
+                        <option value="traine" id="trainee">Trainee</option>
+                        <option value="junior" id="junior">Junior</option>
+                      </select>
+                </div>
+            </div>
+        </section>
+        <div class="alert alert-primary" role="alert">
+            <p class="resultado">
+            </p>
+        </div>
+        <div class="d-flex justify-content-center items-center">
+            <div class="tick">
+                <button type="button" class="boton1 m-2 btn btn-success btn-lg px-4 fs-6" id="resumen">Borrar</button>
+                <button type="button" class="m-2 btn btn-success btn-lg px-4 gap-3 fs-6">Resumen</button>
+            </div>
+        </div>
+
+
         <!--FOOTER-->
         <div class="pie container-fluid">
-            <ul class="nav justify-content-center pb-3 mb-3">
+            <ul class="nav justify-content-center pb-3 mb-3 f-flex justify-content-center align-center">
                 <li class="nav-item"><a href="#" class="nav-link px-2">Preguntas frecuentes</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 ">Contáctanos</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 ">Prensa</a></li>
@@ -159,6 +226,27 @@
         </div>
 
         <script src="./js/bootstrap.min.js"></script>
+        <script>
+            let boton = document.querySelector(resumen);
+
+            function recogerDatos{
+                let estudianteJunior = document.getElementById("junior");
+                let estudianteTraine = document.getElementById("trainee");
+                let estudiante = document.getElementById("estudiante");
+
+                if (datos == junior){
+                    descuentoJunior = (estudianteJunior * 0.15);
+                    console.log(estudianteJunior);
+                }else if (datos == trainee){
+                    descuentoTrainee = (estudianteTraine * 0.5);
+                }else (datos == estudiante){
+                    descuentoEstudiante = (estudiante * 0.8);
+                }
+            }
+
+            boton.addEventListener("click",recogerDatos);
+
+        </script>
 </body>
 
 </html>

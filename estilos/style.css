@@ -88,3 +88,14 @@
 .pie ul li a:hover {
     color: #29A945;
 }
+
+.tick button{
+    background-color: #96C93E;
+    border-color: #96C93E;
+}
+
+.tick button:hover{
+    color: #96C93E;
+    background-color: #fff;
+    border-color: #96C93E;
+}
