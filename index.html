@@ -177,39 +177,45 @@
                 </div>
             </div>
         </section>
+        <h5 class="d-flex justify-content-center fs-2">VALOR TICKET $200</h5>
         <section class="d-flex justify-content-center align-items-center my-3"> 
-            <div class="row form">
+            <form class="row form">
                 <div class="my-2 col-md-6 col-sm-12 ">
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    <input type="name" class="form-control" id="name" aria-describedby="emailHelp"
                         placeholder="Nombre">
                 </div>
                 <div class="my-2 col-md-6 col-sm-12">
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    <input type="email" class="form-control" id="lastName" aria-describedby="emailHelp"
                         placeholder="Apellido">
                 </div>
                 <div class="mb-3 my-2 col-12">
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                    <input type="email" class="form-control" id="email"
                         placeholder="ejemplo@correo.com">
                 </div>
-                <div>
-                    <select class="form-select" aria-label="Default select example">
-                        <option value="estudiante" id="estudiante">Estudiante</option>
-                        <option value="traine" id="trainee">Trainee</option>
-                        <option value="junior" id="junior">Junior</option>
-                      </select>
+                <div class="col-md-6 col-sm-12 ">
+                    <p class="text-start">Cantidad</p>
+                    <input type="email" class="form-control" id="cantidad"
+                        placeholder="Cantidad">
                 </div>
-            </div>
+                <div class="col-md-6 col-sm-12 ">
+                    <p class="text-start">Categoria</p>
+                    <select class="form-select" id="opciones" aria-label="Default select example">
+                        <option value="estudiante">Estudiante</option>
+                        <option value="traine">Trainee</option>
+                        <option value="junior">Junior</option>
+                    </select>
+                </div>
+                <div class="my-3 p-2 alert alert-primary" role="alert">
+                    <p class="resultado"></p>
+                </div>
+                <div class="d-flex justify-content-center items-center">
+                    <div class="tick">
+                        <button type="reset" class="boton1 m-2 btn btn-success btn-lg px-4 fs-6">Borrar</button>
+                        <button type="button" class="m-2 btn btn-success btn-lg px-4 gap-3 fs-6" id="resumen">Resumen</button>
+                    </div>
+                </div>
+            </form>
         </section>
-        <div class="alert alert-primary" role="alert">
-            <p class="resultado">
-            </p>
-        </div>
-        <div class="d-flex justify-content-center items-center">
-            <div class="tick">
-                <button type="button" class="boton1 m-2 btn btn-success btn-lg px-4 fs-6" id="resumen">Borrar</button>
-                <button type="button" class="m-2 btn btn-success btn-lg px-4 gap-3 fs-6">Resumen</button>
-            </div>
-        </div>
 
 
         <!--FOOTER-->
@@ -227,24 +233,67 @@
 
         <script src="./js/bootstrap.min.js"></script>
         <script>
-            let boton = document.querySelector(resumen);
+            let botoncito = document.querySelector("#resumen");
 
-            function recogerDatos{
-                let estudianteJunior = document.getElementById("junior");
-                let estudianteTraine = document.getElementById("trainee");
-                let estudiante = document.getElementById("estudiante");
+            function recogerDatos(){
+                //guardar el nombre//
+                let nombre = document.getElementById("name");
+                let guardarNombre = nombre.value;
+                console.log(guardarNombre);
 
-                if (datos == junior){
-                    descuentoJunior = (estudianteJunior * 0.15);
-                    console.log(estudianteJunior);
-                }else if (datos == trainee){
-                    descuentoTrainee = (estudianteTraine * 0.5);
-                }else (datos == estudiante){
-                    descuentoEstudiante = (estudiante * 0.8);
+                //guardar el apellido//
+                let apellido = document.getElementById("lastName");
+                let guardarApellido = apellido.value;
+                console.log(guardarApellido);
+
+                //guardar email//
+                let email = document.getElementById("email");
+                let guardarEmail = email.value;
+                console.log(guardarEmail);
+
+                //guardar la opcion elegida//
+                let opciones = document.getElementById("opciones");
+                opcionAlumno = opciones.value;
+                console.log(opcionAlumno);
+
+                //guardar la cantidad de tickets//
+                let cantidad = document.getElementById("cantidad");
+                let almacenarCantidad = cantidad.value;
+                console.log(almacenarCantidad);
+
+                let ticket = 200;
+                let ticketEst, ticketJunior,ticketTraine;
+                let descuentoT, totalTraine;
+                let descuentoE, totalEst;
+                let descuentoJ, totalJunior;
+
+                if(opcionAlumno == "traine"){
+                    ticketTraine = ticket * almacenarCantidad;//2 ticket $400//
+                    descuentoT = ticketTraine *0.5;
+                    totalTraine = ticketTraine - descuentoJ;
+                    console.log("el total a pagar es de $"+totalTraine);
+                }else if(opcionAlumno == "estudiante"){
+                    ticketEst = ticket * almacenarCantidad;
+                    descuentoE = ticketEst * 0.8;
+                    totalEst = ticketEst - descuentoE;
+                    console.log("el total a pagar es de $"+totalEst);
+                }else{
+                    ticketJunior = ticket * almacenarCantidad;
+                    descuentoJ = ticketJunior * 0.15;
+                    totalJunior = ticketJunior - descuentoJ;
+                    console.log("el total a pagar es de $"+totalJunior);
                 }
+
+                //mostrar resultado
+                let resultadoJ = document.querySelector(".resultado");
+                resultadoJ.textContent = "El total a pagar es de $"+totalJunior; 
+                let resultadoE = document.querySelector(".resultado");
+                resultadoE.textContent = "El total a pagar es de $"+totalEst;
+                let resultadoT = document.querySelector("resultado");
+                resultadoT.textContent = "El total a pagar es de $"+totalTraine;
             }
 
-            boton.addEventListener("click",recogerDatos);
+        botoncito.addEventListener("click",recogerDatos);
 
         </script>
 </body>
