@@ -267,30 +267,24 @@
                 let descuentoE, totalEst;
                 let descuentoJ, totalJunior;
 
+                let resultado = document.querySelector(".resultado");
+
                 if(opcionAlumno == "traine"){
                     ticketTraine = ticket * almacenarCantidad;//2 ticket $400//
                     descuentoT = ticketTraine *0.5;
-                    totalTraine = ticketTraine - descuentoJ;
-                    console.log("el total a pagar es de $"+totalTraine);
+                    totalTraine = ticketTraine - descuentoT;
+                    resultado.textContent = "El total a pagar es de $"+totalTraine;
                 }else if(opcionAlumno == "estudiante"){
                     ticketEst = ticket * almacenarCantidad;
                     descuentoE = ticketEst * 0.8;
                     totalEst = ticketEst - descuentoE;
-                    console.log("el total a pagar es de $"+totalEst);
+                    resultado.textContent = "El total a pagar es de $"+totalEst;
                 }else{
                     ticketJunior = ticket * almacenarCantidad;
                     descuentoJ = ticketJunior * 0.15;
                     totalJunior = ticketJunior - descuentoJ;
-                    console.log("el total a pagar es de $"+totalJunior);
+                    resultado.textContent = "El total a pagar es de $"+totalJunior;
                 }
-
-                //mostrar resultado
-                let resultadoJ = document.querySelector(".resultado");
-                resultadoJ.textContent = "El total a pagar es de $"+totalJunior; 
-                let resultadoE = document.querySelector(".resultado");
-                resultadoE.textContent = "El total a pagar es de $"+totalEst;
-                let resultadoT = document.querySelector("resultado");
-                resultadoT.textContent = "El total a pagar es de $"+totalTraine;
             }
 
         botoncito.addEventListener("click",recogerDatos);
