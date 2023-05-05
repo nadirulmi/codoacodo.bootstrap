@@ -206,11 +206,11 @@
                     </select>
                 </div>
                 <div class="my-3 p-2 alert alert-primary" role="alert">
-                    <p class="resultado"></p>
+                    <p id="resultado"></p>
                 </div>
                 <div class="d-flex justify-content-center items-center">
                     <div class="tick">
-                        <button type="reset" class="boton1 m-2 btn btn-success btn-lg px-4 fs-6">Borrar</button>
+                        <button type="reset" class="boton1 m-2 btn btn-success btn-lg px-4 fs-6" id="borrar">Borrar</button>
                         <button type="button" class="m-2 btn btn-success btn-lg px-4 gap-3 fs-6" id="resumen">Resumen</button>
                     </div>
                 </div>
@@ -234,6 +234,7 @@
         <script src="./js/bootstrap.min.js"></script>
         <script>
             let botoncito = document.querySelector("#resumen");
+            const btnB = document.querySelector("#borrar");
 
             function recogerDatos(){
                 //guardar el nombre//
@@ -267,7 +268,7 @@
                 let descuentoE, totalEst;
                 let descuentoJ, totalJunior;
 
-                let resultado = document.querySelector(".resultado");
+                let resultado = document.getElementById("resultado");
 
                 if(opcionAlumno == "traine"){
                     ticketTraine = ticket * almacenarCantidad;//2 ticket $400//
@@ -288,6 +289,10 @@
             }
 
         botoncito.addEventListener("click",recogerDatos);
+        
+            btnB.onclick = function(){
+                resultado.innerHTML = ""
+            }
 
         </script>
 </body>
